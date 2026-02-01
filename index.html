@@ -157,15 +157,6 @@ nav.scrolled{padding:10px 48px}
 .info-value a{color:var(--charcoal);text-decoration:none;transition:color .3s}
 .info-value a:hover{color:var(--teal)}
 .info-value .pin{width:12px;height:12px;stroke:var(--teal);fill:none;stroke-width:2;display:inline;margin-right:4px;vertical-align:-1px}
-.clinic-cards-compact{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
-.clinic-card-compact{background:var(--teal-pale);border:1.5px solid transparent;border-radius:8px;padding:10px 12px;cursor:pointer;transition:all .3s}
-.clinic-card-compact:hover{background:#fff;border-color:var(--teal);transform:translateY(-1px)}
-.clinic-card-compact.selected{background:#fff;border-color:var(--teal);box-shadow:0 0 0 2px var(--teal-pale)}
-.clinic-card-name{font-size:0.7rem;font-weight:600;color:var(--charcoal);margin-bottom:4px;display:flex;align-items:center;gap:4px}
-.clinic-card-name .pin{width:10px;height:10px;stroke:var(--teal);fill:none;stroke-width:2;flex-shrink:0}
-.clinic-card-timing{font-size:0.62rem;color:var(--warm-gray);line-height:1.4}
-.clinic-map-link{font-size:0.62rem;color:var(--teal);text-decoration:none;margin-top:6px;display:inline-block;font-weight:500;transition:color .3s}
-.clinic-map-link:hover{color:var(--teal-dark);text-decoration:underline}
 .social-row{display:flex;gap:8px;margin-top:8px}
 .social-icon{width:34px;height:34px;border-radius:8px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .2s}
 .social-icon:hover{background:var(--teal);transform:translateY(-1px)}
@@ -177,21 +168,11 @@ nav.scrolled{padding:10px 48px}
 .form-group{display:flex;flex-direction:column}
 .form-group.form-full{grid-column:1/-1}
 .form-group label{font-size:0.7rem;color:var(--warm-gray);font-weight:500;margin-bottom:5px;letter-spacing:.3px}
-.phone-input-wrapper{display:flex;align-items:center;border:1.5px solid var(--border);border-radius:8px;overflow:hidden;transition:border-color .3s,box-shadow .3s}
-.phone-input-wrapper:focus-within{border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-pale)}
-.phone-input-wrapper.error{border-color:#dc2626}
-.country-code{background:var(--light-gray);padding:9px 12px;font-size:0.78rem;color:var(--charcoal);font-weight:500;border-right:1px solid var(--border)}
-.phone-input-wrapper input{flex:1;border:none;padding:9px 12px;font-size:0.78rem;font-family:var(--font-b);color:var(--charcoal)}
-.phone-input-wrapper input:focus{outline:none}
-.error-msg{display:none;font-size:0.65rem;color:#dc2626;margin-top:4px;line-height:1.3}
-.error-msg.show{display:block}
 .form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;font-size:0.78rem;font-family:var(--font-b);color:var(--charcoal);transition:border-color .3s,box-shadow .3s}
-.form-group input.error,.form-group select.error,.form-group textarea.error{border-color:#dc2626}
 .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-pale)}
 .form-group textarea{resize:vertical;min-height:60px}
-.btn-whatsapp{width:100%;background:var(--teal);color:#fff;padding:11px 20px;border-radius:8px;font-size:0.78rem;font-weight:500;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .3s,transform .2s,opacity .3s;margin-top:4px}
-.btn-whatsapp:hover:not(:disabled){background:var(--teal-dark);transform:translateY(-1px)}
-.btn-whatsapp:disabled{opacity:0.5;cursor:not-allowed}
+.btn-whatsapp{width:100%;background:var(--teal);color:#fff;padding:11px 20px;border-radius:8px;font-size:0.78rem;font-weight:500;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .3s,transform .2s;margin-top:4px}
+.btn-whatsapp:hover{background:var(--teal-dark);transform:translateY(-1px)}
 .btn-whatsapp svg{width:18px;height:18px;fill:#fff}
 .form-note{text-align:center;font-size:0.68rem;color:var(--mid-gray);margin-top:10px}
 .map-placeholder{background:var(--light-gray);border-radius:10px;padding:28px 20px;margin-top:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border)}
@@ -222,7 +203,6 @@ footer a:hover{color:var(--teal-light)}
   .spec-grid{grid-template-columns:1fr;max-width:400px}
   .exp-layout{grid-template-columns:1fr;gap:32px}
   .contact-layout{grid-template-columns:1fr;gap:24px}
-  .clinic-cards-compact{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
 
@@ -303,7 +283,7 @@ footer a:hover{color:var(--teal-light)}
           <div class="alumni-icon">AI</div>
           <div class="alumni-text">
             <span class="label">Alumni</span>
-            <span class="value">AIIMS & MAMC</span>
+            <span class="value">AIIMS New Delhi</span>
           </div>
         </div>
       </div>
@@ -580,41 +560,29 @@ footer a:hover{color:var(--teal-light)}
           <!-- Map Pin Icon - UPDATED -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
-        <div style="width:100%">
+        <div>
           <div class="info-label">Clinic Locations</div>
-          <div class="clinic-cards-compact">
-            <div class="clinic-card-compact" onclick="selectClinic('OrthoSphere Clinic, Punjabi Bagh', 'Monday, Thursday & Saturday | 6:00 PM – 8:00 PM', event)">
-              <div class="clinic-card-name">
-                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                OrthoSphere Clinic, Punjabi Bagh
-              </div>
-              <div class="clinic-card-timing">Mon, Thu & Sat | 6:00 PM – 8:00 PM</div>
-              <a href="https://maps.app.goo.gl/ywdVgM3BtfYnVhTB8" target="_blank" class="clinic-map-link" onclick="event.stopPropagation()">View on Map →</a>
-            </div>
-            <div class="clinic-card-compact" onclick="selectClinic('Kalra Hospital, Kirti Nagar', 'Monday to Saturday | 11:30 AM – 12:30 PM', event)">
-              <div class="clinic-card-name">
-                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                Kalra Hospital, Kirti Nagar
-              </div>
-              <div class="clinic-card-timing">Mon to Sat | 11:30 AM – 12:30 PM</div>
-              <a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank" class="clinic-map-link" onclick="event.stopPropagation()">View on Map →</a>
-            </div>
-            <div class="clinic-card-compact" onclick="selectClinic('Apollo Spectra Hospital, Pusa Road', 'Morning hours | Available with prior appointment only', event)">
-              <div class="clinic-card-name">
-                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                Apollo Spectra Hospital, Pusa Road
-              </div>
-              <div class="clinic-card-timing">Morning hours | By appointment</div>
-              <a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank" class="clinic-map-link" onclick="event.stopPropagation()">View on Map →</a>
-            </div>
-            <div class="clinic-card-compact" onclick="selectClinic('Vinayak Hospital, Model Town', 'Saturday only | 9:30 AM – 10:30 AM (Charitable OPD)', event)">
-              <div class="clinic-card-name">
-                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-                Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span>
-              </div>
-              <div class="clinic-card-timing">Saturday only | 9:30 AM – 10:30 AM</div>
-              <a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank" class="clinic-map-link" onclick="event.stopPropagation()">View on Map →</a>
-            </div>
+          <div class="info-value">
+            <a href="https://maps.app.goo.gl/bXivK38x6ypfLnkc9" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              OrthoSphere Clinic, Punjabi Bagh
+            </a><br>
+            <a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kalra Hospital, Kirti Nagar
+            </a><br>
+            <a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Apollo Spectra Hospital, Pusa Road
+            </a><br>
+            <a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span>
+            </a>
           </div>
         </div>
       </div>
@@ -641,19 +609,9 @@ footer a:hover{color:var(--teal-light)}
     <div class="reveal">
       <div class="appt-form">
         <div class="form-row">
-          <div class="form-group"><label>Patient Name</label><input type="text" id="fname" placeholder="First and last name" required><span class="error-msg" id="fname-error"></span></div>
-          <div class="form-group">
-            <label>Phone Number</label>
-            <div class="phone-input-wrapper">
-              <span class="country-code">+91</span>
-              <input type="tel" id="fphone" placeholder="98765 43210" maxlength="10" pattern="[6-9][0-9]{9}" required>
-            </div>
-            <span class="error-msg" id="fphone-error"></span>
-          </div>
+          <div class="form-group"><label>Patient Name</label><input type="text" id="fname" placeholder="First and last name"></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" id="fphone" placeholder="+91 98765 43210"></div>
         </div>
-        <!-- Hidden fields for clinic selection -->
-        <input type="hidden" id="fclinic" value="">
-        <input type="hidden" id="fclnictiming" value="">
         <div class="form-row">
           <div class="form-group"><label>Patient Age</label><input type="text" id="fage" placeholder="e.g. 45"></div>
           <div class="form-group">
@@ -675,7 +633,7 @@ footer a:hover{color:var(--teal-light)}
         <div class="form-row">
           <div class="form-group form-full"><label>Brief Description</label><textarea id="fdesc" placeholder="Describe your symptoms…"></textarea></div>
         </div>
-        <button class="btn-whatsapp" id="submit-btn" onclick="sendWhatsApp()" disabled>
+        <button class="btn-whatsapp" onclick="sendWhatsApp()">
           <!-- WhatsApp Icon - UPDATED -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Submit Request via WhatsApp
@@ -696,7 +654,7 @@ footer a:hover{color:var(--teal-light)}
   <p>&copy; 2026 OrthoSphere – Dr. Tushar Gupta. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms</a></p>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Nav scroll
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>30);
@@ -724,132 +682,25 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 // ─── WhatsApp Form Submit ───
-// Clinic selection function
-function selectClinic(clinicName, clinicTiming, event) {
-  // Remove selected class from all cards
-  document.querySelectorAll('.clinic-card-compact').forEach(card => {
-    card.classList.remove('selected');
-  });
-  
-  // Add selected class to clicked card
-  if(event && event.currentTarget) {
-    event.currentTarget.classList.add('selected');
-  }
-  
-  // Store values in hidden fields
-  document.getElementById('fclinic').value = clinicName;
-  document.getElementById('fclnictiming').value = clinicTiming;
-}
-
-
-// Real-time validation
-const nameInput = document.getElementById('fname');
-const phoneInput = document.getElementById('fphone');
-const submitBtn = document.getElementById('submit-btn');
-
-function validateName() {
-  const nameError = document.getElementById('fname-error');
-  const name = nameInput.value.trim();
-  
-  if(!name) {
-    nameInput.classList.add('error');
-    nameError.textContent = 'Please enter patient name';
-    nameError.classList.add('show');
-    return false;
-  } else {
-    nameInput.classList.remove('error');
-    nameError.classList.remove('show');
-    return true;
-  }
-}
-
-function validatePhone() {
-  const phoneError = document.getElementById('fphone-error');
-  const phoneWrapper = document.querySelector('.phone-input-wrapper');
-  const phone = phoneInput.value.trim();
-  
-  // Check if empty
-  if(!phone) {
-    phoneWrapper.classList.add('error');
-    phoneError.textContent = 'Please enter phone number';
-    phoneError.classList.add('show');
-    return false;
-  }
-  
-  // Check if exactly 10 digits
-  if(phone.length !== 10) {
-    phoneWrapper.classList.add('error');
-    phoneError.textContent = 'Phone number must be exactly 10 digits';
-    phoneError.classList.add('show');
-    return false;
-  }
-  
-  // Check if starts with 6-9
-  if(!/^[6-9]/.test(phone)) {
-    phoneWrapper.classList.add('error');
-    phoneError.textContent = 'Phone number must start with 6, 7, 8, or 9';
-    phoneError.classList.add('show');
-    return false;
-  }
-  
-  // Check if all characters are digits
-  if(!/^[0-9]{10}$/.test(phone)) {
-    phoneWrapper.classList.add('error');
-    phoneError.textContent = 'Phone number must contain only digits';
-    phoneError.classList.add('show');
-    return false;
-  }
-  
-  phoneWrapper.classList.remove('error');
-  phoneError.classList.remove('show');
-  return true;
-}
-
-function validateForm() {
-  const nameValid = validateName();
-  const phoneValid = validatePhone();
-  
-  // Enable/disable submit button based on validation
-  if(nameValid && phoneValid) {
-    submitBtn.disabled = false;
-  } else {
-    submitBtn.disabled = true;
-  }
-}
-
-// Add event listeners for real-time validation
-nameInput.addEventListener('input', validateForm);
-nameInput.addEventListener('blur', validateName);
-phoneInput.addEventListener('input', validateForm);
-phoneInput.addEventListener('blur', validatePhone);
-
-// Initial validation check
-validateForm();
-
 function sendWhatsApp(){
   const name    = document.getElementById('fname').value.trim();
   const phone   = document.getElementById('fphone').value.trim();
   const age     = document.getElementById('fage').value.trim();
-  const clinic  = document.getElementById('fclinic').value;
-  const clinicTiming = document.getElementById('fclnictiming').value;
   const concern = document.getElementById('fconcern').value;
   const desc    = document.getElementById('fdesc').value.trim();
 
   let msg = '🏥 *OrthoSphere – Appointment Request*\n\n';
-  msg += '*Patient Name:* ' + name + '\n';
-  msg += '*Phone:* +91' + phone + '\n';
+  msg += '*Patient Name:* ' + (name || 'Not provided') + '\n';
+  msg += '*Phone:* ' + (phone || 'Not provided') + '\n';
   msg += '*Age:* ' + (age || 'Not provided') + '\n';
-  if(clinic) {
-    msg += '*Preferred Clinic:* ' + clinic + '\n';
-    msg += '*Clinic Timings:* ' + clinicTiming + '\n';
-  }
   msg += '*Area of Concern:* ' + concern + '\n';
-  if(desc) msg += '*Description:* ' + desc + '\n';
+  if(desc){ msg += '*Description:* ' + desc + '\n'; }
+  msg += '\nPlease confirm available slot. Thank you!';
 
-  const whatsappNum = '919953030419';
-  const url = 'https://wa.me/' + whatsappNum + '?text=' + encodeURIComponent(msg);
+  const url = 'https://wa.me/919953030419?text=' + encodeURIComponent(msg);
   window.open(url, '_blank');
 }
 </script>
+
 </body>
 </html>
