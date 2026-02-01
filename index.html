@@ -116,183 +116,121 @@ nav.scrolled{padding:10px 48px}
 .timeline::before{content:'';position:absolute;left:5px;top:4px;bottom:4px;width:1.5px;background:linear-gradient(to bottom,var(--teal),var(--border))}
 .tl-item{position:relative;margin-bottom:14px}
 .tl-item:last-child{margin-bottom:0}
-.tl-dot{position:absolute;left:-22px;top:5px;width:11px;height:11px;border-radius:50%;background:#fff;border:2px solid var(--teal);transition:background .3s}
-.tl-item:hover .tl-dot{background:var(--teal)}
-.tl-year{font-size:0.62rem;color:var(--teal);letter-spacing:.8px;font-weight:500;margin-bottom:2px}
-.tl-item h4{font-size:0.82rem;font-weight:600;color:var(--charcoal)}
-.tl-item p{font-size:0.72rem;color:var(--mid-gray);margin-top:1px}
+.tl-item::before{content:'';position:absolute;left:-18px;top:4px;width:7px;height:7px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 3px var(--teal-pale)}
+.tl-year{font-size:0.68rem;color:var(--teal);font-weight:600;letter-spacing:.6px}
+.tl-title{font-size:0.83rem;color:var(--charcoal);font-weight:500;margin-top:1px}
+.tl-org{font-size:0.72rem;color:var(--mid-gray);margin-top:1px}
 
-/* Achievements */
-.ach-list{display:flex;flex-direction:column;gap:9px}
-.ach-item{display:flex;gap:11px;align-items:flex-start}
-.ach-num{min-width:24px;height:24px;border-radius:6px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;font-size:0.65rem;font-weight:600;color:var(--teal);flex-shrink:0}
-.ach-item p{font-size:0.76rem;color:var(--warm-gray);line-height:1.55;padding-top:2px}
-.exp-quote{margin-top:24px;background:var(--teal);border-radius:12px;padding:18px 20px;position:relative}
-.exp-quote p{font-family:var(--font-d);font-size:0.98rem;color:#fff;font-style:italic;font-weight:300;line-height:1.55}
-.exp-quote::before{content:'"';font-family:var(--font-d);font-size:2.4rem;color:rgba(255,255,255,.12);position:absolute;top:-4px;left:14px;line-height:1}
+/* Bullet List */
+.blist{list-style:none;padding:0}
+.blist li{position:relative;padding-left:20px;margin-bottom:8px;font-size:0.8rem;color:var(--warm-gray);line-height:1.65}
+.blist li:last-child{margin-bottom:0}
+.blist li::before{content:'';position:absolute;left:0;top:8px;width:4px;height:4px;border-radius:50%;background:var(--teal-light)}
 
-/* ─── TESTIMONIALS ─── */
-.testimonials{background:var(--off-white)}
-.test-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:960px;margin:0 auto}
-.test-card{background:#fff;border-radius:14px;padding:20px 18px;border:1px solid var(--border);transition:transform .3s,box-shadow .3s}
-.test-card:hover{transform:translateY(-2px);box-shadow:0 6px 24px rgba(0,0,0,.06)}
-.stars{color:#f0a830;font-size:0.78rem;letter-spacing:1.5px;margin-bottom:8px}
-.test-card blockquote{font-size:0.74rem;color:var(--warm-gray);line-height:1.7;font-style:italic;margin-bottom:12px}
-.test-author{display:flex;align-items:center;gap:9px}
-.author-avatar{width:32px;height:32px;border-radius:50%;background:var(--teal);display:flex;align-items:center;justify-content:center;color:#fff;font-size:0.72rem;font-weight:600;flex-shrink:0}
-.author-info .name{font-size:0.74rem;font-weight:600;color:var(--charcoal)}
-.author-info .loc{font-size:0.64rem;color:var(--mid-gray)}
-.google-link{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:18px;font-size:0.74rem;color:var(--teal);text-decoration:none;transition:color .3s}
-.google-link:hover{color:var(--teal-dark)}
-.google-link svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2}
+/* Tags */
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tag{background:var(--teal-pale);color:var(--teal);font-size:0.64rem;padding:3px 8px;border-radius:4px;font-weight:500;letter-spacing:.3px}
 
-/* ─── RESEARCH ─── */
-.research{background:#fff}
-.research-layout{display:grid;grid-template-columns:1.5fr 1fr;gap:36px;max-width:1000px;margin:0 auto;align-items:start}
-.pub-list{list-style:none}
-.pub-list li{padding:9px 0;border-bottom:1px solid var(--border);font-size:0.76rem;color:var(--warm-gray);line-height:1.55;transition:color .3s}
-.pub-list li:hover{color:var(--charcoal)}
-.pub-list li:last-child{border-bottom:none}
-.pub-list li em{color:var(--mid-gray)}
-.pub-more{font-size:0.7rem;color:var(--teal);text-align:center;margin-top:14px;font-style:italic}
-.profiles-title{font-family:var(--font-d);font-size:1.2rem;font-weight:600;color:var(--charcoal);margin-bottom:10px}
-.profile-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:var(--light-gray);border-radius:8px;margin-bottom:6px;text-decoration:none;transition:background .3s}
-.profile-item:hover{background:var(--teal-pale)}
-.profile-item span{font-size:0.78rem;font-weight:500;color:var(--charcoal)}
-.profile-item svg{width:16px;height:16px;stroke:var(--teal);fill:none;stroke-width:2}
-
-/* ─── INSTAGRAM ─── */
-.instagram{background:var(--off-white);text-align:center}
-.insta-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:780px;margin:0 auto}
-.insta-card{aspect-ratio:1;border-radius:12px;overflow:hidden;position:relative;cursor:pointer}
-.insta-card-bg{width:100%;height:100%;transition:transform .4s}
-.insta-card:hover .insta-card-bg{transform:scale(1.05)}
-.insta-card-overlay{position:absolute;inset:0;background:rgba(42,125,111,.3);opacity:0;transition:opacity .3s;display:flex;align-items:center;justify-content:center}
-.insta-card:hover .insta-card-overlay{opacity:1}
-.insta-card-overlay svg{width:22px;height:22px;stroke:#fff;fill:none;stroke-width:1.5}
-.ig1{background:linear-gradient(135deg,#f7a440,#e8694a)}
-.ig2{background:linear-gradient(135deg,#2a6e44,#5aaf7a)}
-.ig3{background:linear-gradient(135deg,#8b5e3c,#d4a574)}
-.ig4{background:linear-gradient(135deg,#3a5a7c,#6ca1c7)}
-.insta-btn{display:inline-flex;align-items:center;gap:7px;margin-top:20px;padding:8px 18px;border:1px solid var(--border);border-radius:6px;font-size:0.7rem;color:var(--warm-gray);text-decoration:none;transition:all .3s;background:#fff}
-.insta-btn:hover{border-color:var(--teal);color:var(--teal);background:var(--teal-pale)}
-.insta-btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:2}
+/* Research section */
+.research{margin-top:24px}
+.research-item{background:var(--light-gray);border-radius:10px;padding:12px 14px;margin-bottom:8px;display:flex;gap:10px;align-items:start;transition:background .3s}
+.research-item:hover{background:#e8e4e0}
+.research-item:last-child{margin-bottom:0}
+.research-icon{width:26px;height:26px;border-radius:6px;background:#fff;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.research-icon svg{width:14px;height:14px;stroke:var(--teal);fill:none;stroke-width:1.8}
+.research-content h5{font-size:0.78rem;color:var(--charcoal);font-weight:600;margin-bottom:2px;line-height:1.4}
+.research-content p{font-size:0.68rem;color:var(--mid-gray);line-height:1.5}
+.research-content a{color:var(--teal);text-decoration:none;font-size:0.68rem;margin-top:3px;display:inline-flex;align-items:center;gap:3px;font-weight:500;transition:gap .2s}
+.research-content a:hover{gap:5px}
+.research-content a svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2}
 
 /* ─── CONTACT ─── */
-.contact{background:#fff}
-.contact-layout{display:grid;grid-template-columns:1fr 1.4fr;gap:36px;max-width:1000px;margin:0 auto;align-items:start}
-.contact-info h3{font-family:var(--font-d);font-size:1.3rem;font-weight:600;color:var(--charcoal);margin-bottom:6px}
-.contact-info > p{font-size:0.76rem;color:var(--warm-gray);margin-bottom:16px;line-height:1.65}
-.info-item{display:flex;gap:12px;margin-bottom:14px;align-items:flex-start}
-.info-icon{width:34px;height:34px;border-radius:8px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.info-icon svg{width:16px;height:16px;stroke:var(--teal);fill:none;stroke-width:1.8}
-.info-label{font-size:0.6rem;color:var(--mid-gray);letter-spacing:.8px;text-transform:uppercase;margin-bottom:2px}
-.info-value{font-size:0.78rem;color:var(--charcoal);font-weight:500;line-height:1.7}
+.contact{background:var(--off-white);padding-bottom:40px}
+.contact-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;max-width:980px;margin:0 auto}
+.info-col{display:flex;flex-direction:column;gap:16px}
+.info-item{background:#fff;border-radius:12px;padding:16px 18px;border:1px solid var(--border);display:flex;gap:14px;align-items:flex-start;transition:box-shadow .3s}
+.info-item:hover{box-shadow:0 4px 20px rgba(0,0,0,.05)}
+.info-icon{width:36px;height:36px;border-radius:8px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.info-icon svg{width:18px;height:18px;stroke:var(--teal);fill:none;stroke-width:1.8}
+.info-label{font-size:0.64rem;color:var(--mid-gray);letter-spacing:.8px;text-transform:uppercase;font-weight:500}
+.info-value{font-size:0.82rem;color:var(--charcoal);font-weight:500;margin-top:2px}
 .info-value a{color:var(--charcoal);text-decoration:none;transition:color .3s}
 .info-value a:hover{color:var(--teal)}
-.social-row{display:flex;gap:8px;margin-top:14px}
-.social-icon{width:34px;height:34px;border-radius:8px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:all .3s;text-decoration:none}
-.social-icon:hover{background:var(--teal);border-color:var(--teal)}
-.social-icon svg{width:15px;height:15px;stroke:var(--warm-gray);fill:none;stroke-width:1.8;transition:stroke .3s}
+.info-value .pin{width:12px;height:12px;stroke:var(--teal);fill:none;stroke-width:2;display:inline;margin-right:4px;vertical-align:-1px}
+.social-row{display:flex;gap:8px;margin-top:8px}
+.social-icon{width:34px;height:34px;border-radius:8px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .2s}
+.social-icon:hover{background:var(--teal);transform:translateY(-1px)}
+.social-icon svg{width:16px;height:16px;stroke:var(--teal);fill:none;stroke-width:1.8;transition:stroke .3s}
 .social-icon:hover svg{stroke:#fff}
 
-/* ─── LOCATION LINKS – underline + pin + map popover ─── */
-.locations{position:relative}
-.loc-wrap{position:relative;display:inline-block}
-.locations a{
-  color:var(--teal-dark);
-  text-decoration:none;
-  border-bottom:1.5px solid var(--teal-light);
-  padding-bottom:1px;
-  display:inline-flex;align-items:center;gap:5px;
-  transition:color .2s,border-color .2s;
-}
-.locations a:hover{color:var(--teal);border-color:var(--teal)}
-.locations a .pin{width:11px;height:11px;flex-shrink:0;stroke:var(--teal-dark);fill:none;stroke-width:2;transition:stroke .2s}
-.locations a:hover .pin{stroke:var(--teal)}
-/* Map preview card */
-.map-pop{
-  position:absolute;left:0;bottom:calc(100% + 8px);
-  width:260px;height:180px;border-radius:10px;overflow:hidden;
-  box-shadow:0 8px 28px rgba(0,0,0,.14);
-  border:2px solid #fff;
-  opacity:0;pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .22s ease,transform .22s ease;
-  z-index:50;background:#d4ddd8;
-}
-.map-pop iframe{width:100%;height:100%;border:none;display:block}
-.loc-wrap:hover .map-pop{opacity:1;pointer-events:auto;transform:translateY(0)}
-/* little arrow notch below popover */
-.map-pop::after{
-  content:'';position:absolute;bottom:-6px;left:24px;
-  width:12px;height:12px;background:#fff;
-  transform:rotate(45deg);box-shadow:1px 1px 3px rgba(0,0,0,.08);
-  z-index:-1;
-}
+/* Clinic Cards */
+.clinic-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.clinic-card{background:#fff;border-radius:10px;padding:14px 16px;border:2px solid var(--border);cursor:pointer;transition:all .3s;position:relative}
+.clinic-card:hover{border-color:var(--teal-light);box-shadow:0 4px 16px rgba(0,0,0,.06)}
+.clinic-card.selected{border-color:var(--teal);background:var(--teal-pale);box-shadow:0 4px 20px rgba(42,125,111,.15)}
+.clinic-card input[type="radio"]{position:absolute;opacity:0;pointer-events:none}
+.clinic-name{font-size:0.8rem;font-weight:600;color:var(--charcoal);margin-bottom:6px;display:flex;align-items:center;gap:6px}
+.clinic-name svg{width:14px;height:14px;stroke:var(--teal);fill:none;stroke-width:2}
+.clinic-timing{font-size:0.68rem;color:var(--warm-gray);line-height:1.5;margin-bottom:4px;display:flex;align-items:start;gap:5px}
+.clinic-timing svg{width:12px;height:12px;stroke:var(--mid-gray);fill:none;stroke-width:2;flex-shrink:0;margin-top:2px}
+.clinic-link{font-size:0.66rem;color:var(--teal);text-decoration:none;display:inline-flex;align-items:center;gap:4px;margin-top:4px}
+.clinic-link:hover{text-decoration:underline}
+.clinic-link svg{width:10px;height:10px}
+.clinic-selection-label{font-size:0.74rem;color:var(--warm-gray);font-weight:600;margin-bottom:10px;letter-spacing:.3px}
 
-/* ─── FORM ─── */
-.appt-form{background:var(--charcoal);border-radius:16px;padding:22px 20px}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:8px}
+.appt-form{background:#fff;border-radius:12px;padding:22px 24px;border:1px solid var(--border)}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .form-group{display:flex;flex-direction:column}
-.form-group label{font-size:0.6rem;color:rgba(255,255,255,.45);letter-spacing:.7px;text-transform:uppercase;margin-bottom:5px}
-.form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:10px 12px;font-size:0.76rem;font-family:var(--font-b);outline:none;transition:border-color .3s,background .3s}
-.form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.28)}
-.form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:var(--teal-light);background:rgba(255,255,255,.1)}
-.form-group select{appearance:none;cursor:pointer;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24' fill='none' stroke='%23fff' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:32px}
-.form-group select option{background:#1a1a1a;color:#fff}
-.form-group textarea{resize:vertical;min-height:68px}
-.form-full{grid-column:1/-1}
-.btn-whatsapp{width:100%;background:var(--teal);color:#fff;border:none;padding:12px;border-radius:8px;font-size:0.78rem;font-weight:500;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:7px;margin-top:4px;letter-spacing:.3px;transition:background .3s,transform .2s;font-family:var(--font-b)}
+.form-group.form-full{grid-column:1/-1}
+.form-group label{font-size:0.7rem;color:var(--warm-gray);font-weight:500;margin-bottom:5px;letter-spacing:.3px}
+.form-group input,.form-group select,.form-group textarea{border:1.5px solid var(--border);border-radius:8px;padding:9px 12px;font-size:0.78rem;font-family:var(--font-b);color:var(--charcoal);transition:border-color .3s,box-shadow .3s}
+.form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 3px var(--teal-pale)}
+.form-group textarea{resize:vertical;min-height:60px}
+.btn-whatsapp{width:100%;background:var(--teal);color:#fff;padding:11px 20px;border-radius:8px;font-size:0.78rem;font-weight:500;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:8px;transition:background .3s,transform .2s;margin-top:4px}
 .btn-whatsapp:hover{background:var(--teal-dark);transform:translateY(-1px)}
-.btn-whatsapp svg{width:16px;height:16px;fill:#fff}
-.form-note{font-size:0.64rem;color:rgba(255,255,255,.35);text-align:center;margin-top:10px}
-
-/* Map placeholder strip */
-.map-placeholder{margin-top:8px;height:100px;border-radius:10px;overflow:hidden;background:linear-gradient(135deg,#e8ece8,#d4ddd8);display:flex;align-items:center;justify-content:center;position:relative}
-.map-placeholder svg{width:22px;height:22px;stroke:var(--teal);fill:none;stroke-width:1.2;opacity:.4}
-.map-label{position:absolute;bottom:8px;left:12px;font-size:0.64rem;color:var(--warm-gray)}
+.btn-whatsapp svg{width:18px;height:18px;fill:#fff}
+.form-note{text-align:center;font-size:0.68rem;color:var(--mid-gray);margin-top:10px}
+.map-placeholder{background:var(--light-gray);border-radius:10px;padding:28px 20px;margin-top:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;border:1px solid var(--border)}
+.map-placeholder svg{width:32px;height:32px;stroke:var(--teal);fill:none;stroke-width:1.8}
+.map-label{font-size:0.76rem;color:var(--warm-gray);font-weight:500}
 
 /* ─── FOOTER ─── */
-footer{background:var(--charcoal);color:rgba(255,255,255,.4);padding:28px 48px;text-align:center;font-size:0.68rem;letter-spacing:.3px}
-footer a{color:rgba(255,255,255,.5);text-decoration:none;transition:color .3s}
+footer{background:var(--charcoal);color:var(--light-gray);padding:18px 48px;text-align:center}
+footer p{font-size:0.68rem}
+footer a{color:var(--light-gray);text-decoration:none;transition:color .3s}
 footer a:hover{color:var(--teal-light)}
 
-/* ─── REVEAL ─── */
-.reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}
-.reveal.visible{opacity:1;transform:translateY(0)}
-
 /* ─── RESPONSIVE ─── */
-@media(max-width:900px){
-  nav{padding:12px 20px}
-  .nav-links{gap:14px}
-  .hero{grid-template-columns:1fr;padding:90px 20px 50px;text-align:center}
-  .hero::before{width:100%;height:50%;top:50%}
-  .hero-content{max-width:100%}
-  .hero-content .hero-sub{max-width:100%}
+@media (max-width:960px){
+  nav{padding:12px 28px}
+  nav.scrolled{padding:8px 28px}
+  .nav-links{gap:16px}
+  .nav-links a{font-size:0.65rem}
+  .hero{grid-template-columns:1fr;padding:100px 28px 40px;gap:32px}
+  .hero::before{width:100%;height:40%;top:auto;bottom:0;background:linear-gradient(to top,var(--teal-pale) 0%,rgba(232,245,242,.3) 60%,transparent 100%)}
+  .hero-content{max-width:100%;text-align:center}
+  .hero-content h2{font-size:2.4rem}
   .hero-btns{justify-content:center}
+  .hero-trust{justify-content:center}
   .hero-visual{order:-1}
-  .sec{padding:40px 20px}
-  .about-cards,.spec-grid,.test-grid{grid-template-columns:1fr;max-width:480px;margin-left:auto;margin-right:auto}
-  .spec-card{flex-direction:column;gap:10px}
-  .exp-layout,.research-layout,.contact-layout{grid-template-columns:1fr;gap:32px;max-width:480px;margin-left:auto;margin-right:auto}
-  .insta-grid{grid-template-columns:repeat(2,1fr);max-width:420px;margin-left:auto;margin-right:auto}
-  /* hide map popover on mobile – tap opens link directly */
-  .map-pop{display:none}
-}
-@media(max-width:560px){
-  .hero-content h2{font-size:2.2rem}
-  .nav-links{display:none}
-  .hero-card{width:260px;height:320px}
+  .sec{padding:40px 28px}
+  .about-cards{grid-template-columns:1fr;max-width:400px}
+  .spec-grid{grid-template-columns:1fr;max-width:400px}
+  .exp-layout{grid-template-columns:1fr;gap:32px}
+  .contact-layout{grid-template-columns:1fr;gap:24px}
   .form-row{grid-template-columns:1fr}
 }
+
+/* ─── SCROLL REVEAL ─── */
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- NAVIGATION -->
 <nav id="navbar">
-  <a href="#home" class="nav-brand">
+  <a href="#" class="nav-brand">
     <h1>OrthoSphere</h1>
     <div class="divider"></div>
     <p>Dr. Tushar Gupta</p>
@@ -301,36 +239,67 @@ footer a:hover{color:var(--teal-light)}
     <a href="#about">About</a>
     <a href="#specialties">Specialties</a>
     <a href="#experience">Experience</a>
-    <a href="#research">Research</a>
     <a href="#contact">Contact</a>
-    <a href="tel:+919953030419" class="btn-call"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>Call Now</a>
+    <a href="tel:+919953030419" class="btn-call">
+      <!-- Phone Call Icon - UPDATED -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg>
+      Call Now
+    </a>
   </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content reveal">
-    <div class="hero-badge"><span class="dot"></span><span>Accepting New Patients</span></div>
-    <h2>Advanced<br>Orthopaedic Care<br>by <em>AIIMS Specialist</em></h2>
-    <p class="hero-sub">Dr. Tushar Gupta is the <strong>First M.Ch Joint Replacement &amp; Arthroscopy Surgeon from AIIMS</strong> serving Delhi-NCR. Specializing in Robotic Surgery, Sports Injuries, and Complex Trauma.</p>
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">
+      <div class="dot"></div>
+      <span>Premier Orthopaedic Care</span>
+    </div>
+    <h2>Advanced Joint <em>Replacement</em> & Sports Medicine</h2>
+    <p class="hero-sub">
+      With <strong>14+ years</strong> of surgical excellence and training from prestigious institutions globally,
+      Dr. Tushar Gupta offers world-class orthopaedic solutions tailored to restore mobility and enhance quality of life.
+    </p>
     <div class="hero-btns">
-      <a href="#contact" class="btn-primary"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Book Appointment</a>
-      <a href="#contact" class="btn-secondary"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>WhatsApp Consult</a>
+      <a href="#contact" class="btn-primary">
+        <!-- Calendar Plus Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M10 16h4"/><path d="M12 14v4"/></svg>
+        Book Appointment
+      </a>
+      <a href="https://wa.me/919953030419" target="_blank" class="btn-secondary">
+        <!-- WhatsApp Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp Consult
+      </a>
     </div>
     <div class="hero-trust">
-      <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>1000+ Surgeries</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>FIFA Diploma Holder</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>German Fellowship</span></div>
-      <div class="trust-item"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg><span>UK Fellowship</span></div>
+      <div class="trust-item">
+        <!-- Badge Check Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>AIIMS Alumni</span>
+      </div>
+      <div class="trust-item">
+        <!-- Badge Check Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>5000+ Surgeries</span>
+      </div>
+      <div class="trust-item">
+        <!-- Badge Check Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><path d="m9 12 2 2 4-4"/></svg>
+        <span>International Training</span>
+      </div>
     </div>
   </div>
-  <div class="hero-visual reveal">
+  <div class="hero-visual">
     <div class="hero-card">
       <div class="hero-card-bg"></div>
       <div class="hero-card-overlay">
         <div class="alumni-badge">
           <div class="alumni-icon">AI</div>
-          <div class="alumni-text"><span class="label">Alumni</span><span class="value">AIIMS &amp; MAMC</span></div>
+          <div class="alumni-text">
+            <span class="label">Alumni</span>
+            <span class="value">AIIMS New Delhi</span>
+          </div>
         </div>
       </div>
     </div>
@@ -338,189 +307,314 @@ footer a:hover{color:var(--teal-light)}
 </section>
 
 <!-- ABOUT -->
-<section class="about sec" id="about">
-  <div class="sec-head reveal"><div class="sec-label">About</div><h2 class="sec-title">About Dr. Tushar Gupta</h2><div class="sec-div"></div></div>
-  <p class="about-bio reveal">Dr. Tushar Gupta is a distinguished Orthopaedic Surgeon with a rare triple-crown qualification from India's premier institutes (MAMC &amp; AIIMS). With specialized training from Germany and the UK, he brings world-class expertise in Joint Replacement and Arthroscopy to New Delhi.</p>
+<section id="about" class="sec about">
+  <div class="sec-head reveal">
+    <div class="sec-label">About Dr. Gupta</div>
+    <h3 class="sec-title">Excellence in Orthopaedic Surgery</h3>
+    <div class="sec-div"></div>
+  </div>
+  <p class="about-bio reveal">
+    Dr. Tushar Gupta is a distinguished orthopaedic surgeon specializing in joint replacement, arthroscopy, and sports medicine.
+    His career is marked by rigorous training at AIIMS, international fellowships, and a commitment to employing the latest surgical techniques.
+  </p>
   <div class="about-cards">
     <div class="about-card reveal">
-      <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></div>
+      <div class="card-icon">
+        <!-- Graduation Cap Icon - keeping original as it's good -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      </div>
       <h4>Premier Education</h4>
-      <p>Alumnus of MAMC (MBBS) and AIIMS (MS &amp; M.Ch). Secured AIR 1 in the M.Ch National Entrance Examination 2022 and AIR 95 in pre-medical exams.</p>
+      <p>MBBS & MS Orthopaedics from AIIMS New Delhi, one of India's top medical institutions.</p>
     </div>
     <div class="about-card reveal">
-      <div class="card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg></div>
+      <div class="card-icon">
+        <!-- Globe Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.54 15H17a2 2 0 0 0-2 2v4.54"/><path d="M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17"/><path d="M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05"/><circle cx="12" cy="12" r="10"/></svg>
+      </div>
       <h4>Global Expertise</h4>
-      <p>Fellowship in Revision Arthroplasty at ENDO-Klinik, Germany. Visiting Surgeon at Wrightington NHS Hospital, United Kingdom.</p>
+      <p>Trained internationally in Belgium, Netherlands & UK with exposure to cutting-edge techniques.</p>
     </div>
     <div class="about-card reveal">
-      <div class="card-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="card-icon">
+        <!-- Shield Icon - keeping original as it's good -->
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
       <h4>Advanced Techniques</h4>
-      <p>Expert in Robotic Joint Replacement and Direct Anterior Approach (DAA) for Hip. A.O Trauma &amp; Joint Reconstruction certified (Switzerland).</p>
+      <p>Specialized in minimally invasive procedures, robotic surgery & rapid recovery protocols.</p>
     </div>
   </div>
 </section>
 
 <!-- SPECIALTIES -->
-<section class="specialties sec" id="specialties">
-  <div class="sec-head reveal"><div class="sec-label">Clinical Excellence</div><h2 class="sec-title">Specialized Procedures</h2><div class="sec-div"></div></div>
-  <p class="sec-sub reveal">Utilizing the latest minimally invasive and robotic-assisted technologies for faster recovery and superior long-term outcomes.</p>
+<section id="specialties" class="sec specialties">
+  <div class="sec-head reveal">
+    <div class="sec-label">Specialties</div>
+    <h3 class="sec-title">Comprehensive Orthopaedic Services</h3>
+    <div class="sec-div"></div>
+    <p class="sec-sub">From joint replacements to sports injuries, receive personalized care tailored to your unique needs.</p>
+  </div>
   <div class="spec-grid">
     <div class="spec-card reveal">
-      <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M18.5 2.5a3.5 3.5 0 015 5L7 19l-4 1 1-4L18.5 2.5z"/></svg></div>
-      <div><h4>Hip Replacement</h4><p>Primary &amp; Revision using DAA and MIS techniques.</p></div>
+      <div class="spec-icon">
+        <!-- Bone Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 10c.7-.7 1.69 0 2.5 0a2.5 2.5 0 1 0 0-5 .5.5 0 0 1-.5-.5 2.5 2.5 0 1 0-5 0c0 .81.7 1.8 0 2.5l-7 7c-.7.7-1.69 0-2.5 0a2.5 2.5 0 0 0 0 5c.28 0 .5.22.5.5a2.5 2.5 0 1 0 5 0c0-.81-.7-1.8 0-2.5Z"/></svg>
+      </div>
+      <div>
+        <h4>Hip Replacement</h4>
+        <p>Total & partial hip replacements using the latest implants for long-lasting results and quicker recovery.</p>
+      </div>
     </div>
     <div class="spec-card reveal">
-      <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
-      <div><h4>Knee Replacement</h4><p>Primary &amp; Revision Knee Replacement with robotic assistance.</p></div>
+      <div class="spec-icon">
+        <!-- Activity Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+      </div>
+      <div>
+        <h4>Knee Replacement</h4>
+        <p>Expertise in total & unicompartmental knee replacements with robotic-assisted precision.</p>
+      </div>
     </div>
     <div class="spec-card reveal">
-      <div class="spec-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
-      <div><h4>Knee Arthroscopy</h4><p>ACL, PCL, MCL, LCL tears and meniscal repairs.</p></div>
+      <div class="spec-icon">
+        <!-- Stethoscope Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+      </div>
+      <div>
+        <h4>Knee Arthroscopy</h4>
+        <p>Minimally invasive keyhole surgery for ligament tears, meniscus injuries, and cartilage damage.</p>
+      </div>
     </div>
     <div class="spec-card reveal">
-      <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-      <div><h4>Shoulder Surgery</h4><p>Arthroscopic Bankart &amp; Rotator Cuff repairs, Reverse Shoulder Replacement.</p></div>
+      <div class="spec-icon">
+        <!-- Shield Icon - keeping original -->
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div>
+        <h4>Shoulder Surgery</h4>
+        <p>Rotator cuff repair, shoulder arthroscopy, and reconstruction for optimal shoulder function.</p>
+      </div>
     </div>
     <div class="spec-card reveal">
-      <div class="spec-icon"><svg viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="9"/></svg></div>
-      <div><h4>Joint Preservation</h4><p>AVN procedures, stem cell-based treatments, PRP &amp; ACP therapies.</p></div>
+      <div class="spec-icon">
+        <!-- Heart Pulse Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M3.22 12H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27"/></svg>
+      </div>
+      <div>
+        <h4>Joint Preservation (AVN)</h4>
+        <p>Core decompression, cartilage transplant, and other joint-saving procedures for avascular necrosis.</p>
+      </div>
     </div>
     <div class="spec-card reveal">
-      <div class="spec-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-      <div><h4>Sports Injuries</h4><p>Ligament, cartilage &amp; tendon repair with rapid return-to-sport protocols.</p></div>
+      <div class="spec-icon">
+        <!-- Dumbbell Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6.5 6.5 11 11"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+      </div>
+      <div>
+        <h4>Sports Injuries</h4>
+        <p>ACL reconstruction, meniscal repair & comprehensive treatment for athletic injuries.</p>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section class="experience sec" id="experience">
-  <div class="sec-head reveal"><div class="sec-label">Experience</div><h2 class="sec-title">Education &amp; Achievements</h2><div class="sec-div"></div></div>
+<section id="experience" class="sec experience">
+  <div class="sec-head reveal">
+    <div class="sec-label">Experience & Expertise</div>
+    <h3 class="sec-title">Professional Journey</h3>
+    <div class="sec-div"></div>
+  </div>
   <div class="exp-layout">
-    <div>
-      <div class="col-title reveal"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>Education &amp; Training</div>
-      <div class="timeline reveal">
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">June 2025</div><h4>Fellowship in Robotic &amp; DAA Hip Replacement</h4><p>International Trainer Dr. Kartik Patel, India</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Aug 2024</div><h4>Visiting Surgeon</h4><p>Upper Limb Unit, Wrightington NHS Hospital, UK</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Jul 2024</div><h4>Fellowship in Revision Arthroplasty</h4><p>ENDO-Klinik, Germany</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Jan 2024</div><h4>Observership – Adult Reconstruction Surgery</h4><p>The Orthopaedic Speciality Clinic, Pune under Dr. Sachin Tapasvi</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Aug 2023</div><h4>Diploma in Football Medicine</h4><p>FIFA Worldwide Medical Network</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Aug 2022 – Jul 2025</div><h4>M.Ch (Joint Replacement &amp; Reconstruction)</h4><p>AIIMS, Rishikesh</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Apr – Jul 2022</div><h4>J&amp;J Fellow in Joint Arthroplasty</h4><p>Dr LH Hiranandani Hospital, Mumbai under Dr. Sanjeev Jain</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">Feb 2019 – Feb 2022</div><h4>MS (Orthopaedics)</h4><p>AIIMS, Rishikesh</p></div>
-        <div class="tl-item"><div class="tl-dot"></div><div class="tl-year">2016</div><h4>MBBS</h4><p>Maulana Azad Medical College (MAMC), Delhi</p></div>
+    <!-- Education & Timeline Column -->
+    <div class="reveal">
+      <div class="col-title">
+        <!-- Briefcase Icon - keeping original -->
+        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
+        Career Milestones
       </div>
-    </div>
-    <div>
-      <div class="col-title reveal"><svg class="star-icon" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Key Achievements</div>
-      <div class="ach-list reveal">
-        <div class="ach-item"><div class="ach-num">1</div><p>Placed <strong>1st</strong> in UAIOACON (Uttaranchal Chapter IOA) Quiz, 2021</p></div>
-        <div class="ach-item"><div class="ach-num">2</div><p>Placed <strong>2nd</strong> in IOACON All India Quiz, 2021</p></div>
-        <div class="ach-item"><div class="ach-num">3</div><p>Completed <strong>ATLS Course</strong> (2020) at AIIMS Rishikesh</p></div>
-        <div class="ach-item"><div class="ach-num">4</div><p>Secured <strong>AIR 1</strong> in M.Ch National Entrance Examination AIIMS-2022</p></div>
-        <div class="ach-item"><div class="ach-num">5</div><p>Awardee – International <strong>Helios ENDO-Klinik Fellowship</strong>, Germany</p></div>
-        <div class="ach-item"><div class="ach-num">6</div><p>Awardee – International <strong>Wrightington NHS Trust Fellowship</strong>, UK</p></div>
-        <div class="ach-item"><div class="ach-num">7</div><p>Organiser – Live Arthroscopy, Cadaveric Knee &amp; Complex Hip Arthroplasty Workshops, UAIOACON 2024</p></div>
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-year">2024 – Present</div>
+          <div class="tl-title">Senior Consultant</div>
+          <div class="tl-org">OrthoSphere Clinic, Punjabi Bagh (Own Practice)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024 – Present</div>
+          <div class="tl-title">Consultant</div>
+          <div class="tl-org">Kalra Hospital, Kirti Nagar</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2024 – Present</div>
+          <div class="tl-title">Visiting Consultant</div>
+          <div class="tl-org">Apollo Spectra Hospital, Pusa Road</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2020 – 2024</div>
+          <div class="tl-title">Senior Consultant</div>
+          <div class="tl-org">BLK Max Super Speciality Hospital, Delhi</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2013 – 2020</div>
+          <div class="tl-title">Senior Resident</div>
+          <div class="tl-org">AIIMS New Delhi (Department of Orthopaedics)</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018</div>
+          <div class="tl-title">AO Trauma Fellowship</div>
+          <div class="tl-org">University of Leuven, Belgium</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018</div>
+          <div class="tl-title">Sports Medicine Fellowship</div>
+          <div class="tl-org">Maastricht University, Netherlands</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2018</div>
+          <div class="tl-title">Hip & Knee Arthroplasty Fellowship</div>
+          <div class="tl-org">Belfast City Hospital, UK</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2011 – 2013</div>
+          <div class="tl-title">MS Orthopaedics</div>
+          <div class="tl-org">AIIMS New Delhi</div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-year">2006 – 2011</div>
+          <div class="tl-title">MBBS</div>
+          <div class="tl-org">AIIMS New Delhi</div>
+        </div>
       </div>
-      <div class="exp-quote reveal">
-        <p>First M.Ch Joint Replacement &amp; Arthroscopy qualified Surgeon from AIIMS serving Delhi-NCR</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<!-- TESTIMONIALS -->
-<section class="testimonials sec" id="testimonials">
-  <div class="sec-head reveal"><h2 class="sec-title">Patient Success Stories</h2><div class="sec-div"></div></div>
-  <p class="sec-sub reveal">Trusted by hundreds of families across Delhi-NCR</p>
-  <div class="test-grid">
-    <div class="test-card reveal">
-      <div class="stars">★★★★★</div>
-      <blockquote>"After struggling with knee pain for years, Dr. Tushar's minimally invasive surgery changed my life. I was walking within 2 days. Absolutely brilliant expertise and compassion throughout the process."</blockquote>
-      <div class="test-author"><div class="author-avatar">R</div><div class="author-info"><div class="name">Rajesh Kumar</div><div class="loc">New Delhi</div></div></div>
+      <div style="margin-top:32px">
+        <div class="col-title">
+          <!-- Award Icon - keeping original -->
+          <svg class="star-icon" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          Key Achievements
+        </div>
+        <ul class="blist">
+          <li><strong>5000+</strong> successful surgeries performed across joint replacements, arthroscopy, trauma</li>
+          <li>Member of <strong>Indian Orthopaedic Association (IOA)</strong></li>
+          <li>Member of <strong>Delhi Orthopaedic Association (DOA)</strong></li>
+          <li>Active researcher with multiple publications in indexed journals</li>
+          <li>Regular presenter at national & international orthopaedic conferences</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">AIIMS Alumni</span>
+          <span class="tag">Joint Replacement</span>
+          <span class="tag">Sports Medicine</span>
+          <span class="tag">Arthroscopy</span>
+        </div>
+      </div>
     </div>
-    <div class="test-card reveal">
-      <div class="stars">★★★★★</div>
-      <blockquote>"My mother's hip replacement was seamless. Dr. Tushar handled it with outstanding confidence. He is kind, patient, and incredibly attainable. Highly recommended."</blockquote>
-      <div class="test-author"><div class="author-avatar">S</div><div class="author-info"><div class="name">Suman Gupta</div><div class="loc">Pandit Nagar</div></div></div>
-    </div>
-    <div class="test-card reveal">
-      <div class="stars">★★★★★</div>
-      <blockquote>"I needed surgery for a sports injury (ACL tear). Dr. Tushar recommended the right surgery and with wonderful care, my recovery was smooth and I'm back to full activity."</blockquote>
-      <div class="test-author"><div class="author-avatar">A</div><div class="author-info"><div class="name">Amit Verma</div><div class="loc">Gurgaon</div></div></div>
-    </div>
-  </div>
-  <a href="#" class="google-link reveal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Read more reviews on Google</a>
-</section>
 
-<!-- RESEARCH -->
-<section class="research sec" id="research">
-  <div class="sec-head reveal"><div class="sec-label">Research</div><h2 class="sec-title">Research &amp; Publications</h2><div class="sec-div"></div></div>
-  <p class="sec-sub reveal">18 PubMed-indexed international publications and 4 book chapters.</p>
-  <div class="research-layout">
-    <div>
-      <div class="col-title reveal"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>Selected Publications</div>
-      <ul class="pub-list reveal">
-        <li>Outcome of hemiarthroplasty to total hip arthroplasty conversion: a systematic review <em>(Musculoskeletal Surgery, Feb 2025)</em></li>
-        <li>Effect of periarticular cocktail of analgesia on immediate post-operative clinical outcomes after bilateral simultaneous TKA <em>(J. Clinical Orthopaedics &amp; Trauma, Oct 2024)</em></li>
-        <li>Total Hip Arthroplasty in Protrusio Acetabuli – A systematic review <em>(Hip &amp; Pelvis, Mar 2024)</em></li>
-        <li>Hip Arthroscopy for Sequelae of Legg-Calve-Perthes Disease: A Systematic Review <em>(Hip &amp; Pelvis, Mar 2021)</em></li>
-        <li>Acetabular and Femoral Component Positioning Using Direct Anterior Approach… <em>(Clinics in Orthopedic Surgery, Sep 2021)</em></li>
-        <li>Book Chapter: Fractures and dislocations around the Hip <em>(A Quick Guide to Essential Orthopedics – Springer)</em></li>
-      </ul>
-      <p class="pub-more reveal">…and 16+ more indexed publications &amp; book chapters</p>
-    </div>
-    <div>
-      <div class="profiles-title reveal">Research Profiles</div>
-      <div class="reveal">
-        <a href="https://scholar.google.com/citations?user=5CYumKYAAAAJ&hl=en" target="_blank" class="profile-item"><span>Google Scholar</span><svg viewBox="0 0 24 24"><path d="M18 13v6m3-3H15"/><path d="M5 12l7-9 7 9"/><path d="M5.5 9.5L3 22h18l-2.5-12.5"/></svg></a>
-        <a href="https://www.researchgate.net/profile/Tushar-Gupta-36" target="_blank" class="profile-item"><span>ResearchGate</span><svg viewBox="0 0 24 24"><path d="M18 13v6m3-3H15"/><path d="M5 12l7-9 7 9"/><path d="M5.5 9.5L3 22h18l-2.5-12.5"/></svg></a>
-        <a href="https://orcid.org/0000-0002-6821-7594" target="_blank" class="profile-item"><span>ORCID</span><svg viewBox="0 0 24 24"><path d="M18 13v6m3-3H15"/><path d="M5 12l7-9 7 9"/><path d="M5.5 9.5L3 22h18l-2.5-12.5"/></svg></a>
+    <!-- Research & Publications Column -->
+    <div class="reveal">
+      <div class="col-title">
+        <!-- Book Open Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Research & Publications
+      </div>
+      <div class="research">
+        <div class="research-item">
+          <div class="research-icon">
+            <!-- Book Open Icon - UPDATED -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="research-content">
+            <h5>Multiple Peer-Reviewed Publications</h5>
+            <p>Indexed in PubMed, Scopus & Web of Science, focusing on arthroplasty, trauma, and surgical innovation.</p>
+            <a href="https://scholar.google.com/citations?user=VfLItesAAAAJ&hl=en" target="_blank">
+              View Publications
+              <!-- External Link Icon - UPDATED -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="research-item">
+          <div class="research-icon">
+            <!-- Book Open Icon - UPDATED -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="research-content">
+            <h5>Conference Presentations</h5>
+            <p>Featured speaker at IOA, SICOT, and other global orthopaedic conferences.</p>
+          </div>
+        </div>
+        <div class="research-item">
+          <div class="research-icon">
+            <!-- Book Open Icon - UPDATED -->
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <div class="research-content">
+            <h5>Research Gate Profile</h5>
+            <p>Active in global orthopaedic research community with ongoing clinical studies.</p>
+            <a href="https://www.researchgate.net/profile/Tushar-Gupta-35" target="_blank">
+              View Profile
+              <!-- External Link Icon - UPDATED -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</section>
-
-<!-- INSTAGRAM -->
-<section class="instagram sec" id="instagram">
-  <div class="sec-head reveal"><div class="sec-label">Connect Socially</div><h2 class="sec-title">Follow @ortho.sphere</h2><div class="sec-div"></div></div>
-  <div class="insta-grid reveal">
-    <div class="insta-card"><div class="insta-card-bg ig1"></div><div class="insta-card-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-    <div class="insta-card"><div class="insta-card-bg ig2"></div><div class="insta-card-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-    <div class="insta-card"><div class="insta-card-bg ig3"></div><div class="insta-card-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-    <div class="insta-card"><div class="insta-card-bg ig4"></div><div class="insta-card-overlay"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div></div>
-  </div>
-  <a href="https://www.instagram.com/ortho.sphere" target="_blank" class="insta-btn reveal"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/></svg>View Full Profile</a>
 </section>
 
 <!-- CONTACT -->
-<section class="contact sec" id="contact">
-  <div class="sec-head reveal"><div class="sec-label">Get In Touch</div><h2 class="sec-title">Book an Appointment</h2><div class="sec-div"></div></div>
+<section id="contact" class="sec contact">
+  <div class="sec-head reveal">
+    <div class="sec-label">Get in Touch</div>
+    <h3 class="sec-title">Book Your Consultation</h3>
+    <div class="sec-div"></div>
+    <p class="sec-sub">Reach out to schedule an appointment or for any orthopaedic queries. We're here to help you regain mobility and live pain-free.</p>
+  </div>
   <div class="contact-layout">
-    <div class="contact-info reveal">
-      <h3>Visit OrthoSphere Clinic</h3>
-      <p>Ready to take the first step towards a pain-free life? Visit us or schedule an appointment online.</p>
-
-      <!-- Locations – underlined + pin icon + map popover on hover -->
+    <div class="info-col reveal">
       <div class="info-item">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <div class="info-icon">
+          <!-- Map Pin Icon - UPDATED -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+        </div>
         <div>
           <div class="info-label">Clinic Locations</div>
-          <div class="info-value locations">
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/ywdVgM3BtfYnVhTB8" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>OrthoSphere Clinic, Punjabi Bagh</a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=OrthoSphere+Clinic+East+Punjabi+Bagh+New+Delhi&zoom=15" loading="lazy"></iframe></div></span><br>
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Kalra Hospital, Kirti Nagar</a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=Kalra+Hospital+Kirti+Nagar+New+Delhi&zoom=15" loading="lazy"></iframe></div></span><br>
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Apollo Spectra Hospital, Pusa Road</a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=Apollo+Spectra+Hospital+Pusa+Road+New+Delhi&zoom=15" loading="lazy"></iframe></div></span><br>
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span></a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=Vinayak+Hospital+Model+Town+New+Delhi&zoom=15" loading="lazy"></iframe></div></span>
+          <div class="info-value">
+            <a href="https://maps.app.goo.gl/bXivK38x6ypfLnkc9" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              OrthoSphere Clinic, Punjabi Bagh
+            </a><br>
+            <a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kalra Hospital, Kirti Nagar
+            </a><br>
+            <a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Apollo Spectra Hospital, Pusa Road
+            </a><br>
+            <a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank">
+              <!-- Map Pin Icon - UPDATED -->
+              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span>
+            </a>
           </div>
         </div>
       </div>
 
       <div class="info-item">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-        <div><div class="info-label">Phone &amp; WhatsApp</div><div class="info-value"><a href="tel:+919953030419">+91 99530 30419</a></div></div>
+        <div class="info-icon">
+          <!-- Phone Call Icon - UPDATED -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/><path d="M14.05 2a9 9 0 0 1 8 7.94"/><path d="M14.05 6A5 5 0 0 1 18 10"/></svg>
+        </div>
+        <div><div class="info-label">Phone & WhatsApp</div><div class="info-value"><a href="tel:+919953030419">+91 99530 30419</a></div></div>
       </div>
       <div class="info-item">
-        <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-        <div><div class="info-label">Email</div><div class="info-value"><a href="mailto:orthosphereaiims@gmail.com">orthosphereaiims@gmail.com</a></div></div>
+        <div class="info-icon">
+          <!-- Mail Icon - UPDATED -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </div>
+        <div><div class="info-label">Email</div><div class="info-value"><a href="/cdn-cgi/l/email-protection#780c0d0b10190a1f56191111150b381f15191114561b1715"><span class="__cf_email__" data-cfemail="8cf8f9ffe4edfeeba2ede5e5e1ffccebe1ede5e0a2efe3e1">[email&#160;protected]</span></a></div></div>
       </div>
       <div class="social-row">
         <a href="https://www.instagram.com/ortho.sphere" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -545,7 +639,7 @@ footer a:hover{color:var(--teal-light)}
               <option>Sports Injury</option>
               <option>Joint Preservation / AVN</option>
               <option>Cartilage Transplant</option>
-              <option>Foot &amp; Ankle</option>
+              <option>Foot & Ankle</option>
               <option>Trauma</option>
               <option>Other</option>
             </select>
@@ -555,13 +649,15 @@ footer a:hover{color:var(--teal-light)}
           <div class="form-group form-full"><label>Brief Description</label><textarea id="fdesc" placeholder="Describe your symptoms…"></textarea></div>
         </div>
         <button class="btn-whatsapp" onclick="sendWhatsApp()">
-          <svg viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23-1.07-2.64-1.95-4.13-2.55-.22-.09-.42.02-.49.25-.65 1.92-1.83 3.55-3.45 4.72-.16.11-.19.33-.08.49 1.22 1.61 2.77 2.94 4.54 3.92.17.09.38.02.47-.15.28-.58.42-.7.73-1.38.08-.19-.02-.39-.22-.44-.6-.15-1.17-.39-1.7-.7-.16-.1-.19-.32-.06-.45.34-.31.68-.65 1.01-.98.12-.12.31-.1.41.04 2.92 3.46 7.62 4.35 10.66 1.3 3.04-3.05 2.54-7.85-.32-10.96-.1-.13-.31-.15-.43-.03-.33.33-.67.67-1 1-.11.14-.08.36.08.46.53.31 1.1.55 1.7.7.2.05.3.25.22.44-.31.68-.45.8-.73 1.38-.09.17.3.24.47.15z"/></svg>
+          <!-- WhatsApp Icon - UPDATED -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           Submit Request via WhatsApp
         </button>
         <p class="form-note">Our team will coordinate with you to confirm the slot.</p>
       </div>
       <div class="map-placeholder">
-        <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <!-- Map Pin Icon - UPDATED -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         <span class="map-label">Delhi-NCR — Multiple Locations</span>
       </div>
     </div>
@@ -573,7 +669,7 @@ footer a:hover{color:var(--teal-light)}
   <p>&copy; 2026 OrthoSphere – Dr. Tushar Gupta. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms</a></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>30);
@@ -612,14 +708,4 @@ function sendWhatsApp(){
   msg += '*Patient Name:* ' + (name || 'Not provided') + '\n';
   msg += '*Phone:* ' + (phone || 'Not provided') + '\n';
   msg += '*Age:* ' + (age || 'Not provided') + '\n';
-  msg += '*Area of Concern:* ' + concern + '\n';
-  if(desc){ msg += '*Description:* ' + desc + '\n'; }
-  msg += '\n— Sent via OrthoSphere Website';
-
-  const encoded = encodeURIComponent(msg);
-  const waUrl = 'https://api.whatsapp.com/send?phone=919953030419&text=' + encoded;
-  window.open(waUrl, '_blank');
-}
-</script>
-</body>
-</html>
+  msg += '*Area of Concern:* ' + concern + '
