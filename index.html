@@ -157,6 +157,13 @@ nav.scrolled{padding:10px 48px}
 .info-value a{color:var(--charcoal);text-decoration:none;transition:color .3s}
 .info-value a:hover{color:var(--teal)}
 .info-value .pin{width:12px;height:12px;stroke:var(--teal);fill:none;stroke-width:2;display:inline;margin-right:4px;vertical-align:-1px}
+.clinic-cards-compact{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.clinic-card-compact{background:var(--teal-pale);border:1.5px solid transparent;border-radius:8px;padding:10px 12px;cursor:pointer;transition:all .3s}
+.clinic-card-compact:hover{background:#fff;border-color:var(--teal);transform:translateY(-1px)}
+.clinic-card-compact.selected{background:#fff;border-color:var(--teal);box-shadow:0 0 0 2px var(--teal-pale)}
+.clinic-card-name{font-size:0.7rem;font-weight:600;color:var(--charcoal);margin-bottom:4px;display:flex;align-items:center;gap:4px}
+.clinic-card-name .pin{width:10px;height:10px;stroke:var(--teal);fill:none;stroke-width:2;flex-shrink:0}
+.clinic-card-timing{font-size:0.62rem;color:var(--warm-gray);line-height:1.4}
 .social-row{display:flex;gap:8px;margin-top:8px}
 .social-icon{width:34px;height:34px;border-radius:8px;background:var(--teal-pale);display:flex;align-items:center;justify-content:center;transition:background .3s,transform .2s}
 .social-icon:hover{background:var(--teal);transform:translateY(-1px)}
@@ -203,6 +210,7 @@ footer a:hover{color:var(--teal-light)}
   .spec-grid{grid-template-columns:1fr;max-width:400px}
   .exp-layout{grid-template-columns:1fr;gap:32px}
   .contact-layout{grid-template-columns:1fr;gap:24px}
+  .clinic-cards-compact{grid-template-columns:1fr}
   .form-row{grid-template-columns:1fr}
 }
 
@@ -560,29 +568,37 @@ footer a:hover{color:var(--teal-light)}
           <!-- Map Pin Icon - UPDATED -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
         </div>
-        <div>
+        <div style="width:100%">
           <div class="info-label">Clinic Locations</div>
-          <div class="info-value">
-            <a href="https://maps.app.goo.gl/bXivK38x6ypfLnkc9" target="_blank">
-              <!-- Map Pin Icon - UPDATED -->
-              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              OrthoSphere Clinic, Punjabi Bagh
-            </a><br>
-            <a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank">
-              <!-- Map Pin Icon - UPDATED -->
-              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Kalra Hospital, Kirti Nagar
-            </a><br>
-            <a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank">
-              <!-- Map Pin Icon - UPDATED -->
-              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Apollo Spectra Hospital, Pusa Road
-            </a><br>
-            <a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank">
-              <!-- Map Pin Icon - UPDATED -->
-              <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span>
-            </a>
+          <div class="clinic-cards-compact">
+            <div class="clinic-card-compact" onclick="selectClinic('OrthoSphere Clinic, Punjabi Bagh', 'Monday, Thursday & Saturday | 6:00 PM – 8:00 PM')">
+              <div class="clinic-card-name">
+                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                OrthoSphere Clinic, Punjabi Bagh
+              </div>
+              <div class="clinic-card-timing">Mon, Thu & Sat | 6:00 PM – 8:00 PM</div>
+            </div>
+            <div class="clinic-card-compact" onclick="selectClinic('Kalra Hospital, Kirti Nagar', 'Monday to Saturday | 11:30 AM – 12:30 PM')">
+              <div class="clinic-card-name">
+                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Kalra Hospital, Kirti Nagar
+              </div>
+              <div class="clinic-card-timing">Mon to Sat | 11:30 AM – 12:30 PM</div>
+            </div>
+            <div class="clinic-card-compact" onclick="selectClinic('Apollo Spectra Hospital, Pusa Road', 'Morning hours | Available with prior appointment only')">
+              <div class="clinic-card-name">
+                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Apollo Spectra Hospital, Pusa Road
+              </div>
+              <div class="clinic-card-timing">Morning hours | By appointment</div>
+            </div>
+            <div class="clinic-card-compact" onclick="selectClinic('Vinayak Hospital, Model Town', 'Saturday only | 9:30 AM – 10:30 AM (Charitable OPD)')">
+              <div class="clinic-card-name">
+                <svg class="pin" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span>
+              </div>
+              <div class="clinic-card-timing">Saturday only | 9:30 AM – 10:30 AM</div>
+            </div>
           </div>
         </div>
       </div>
@@ -599,7 +615,7 @@ footer a:hover{color:var(--teal-light)}
           <!-- Mail Icon - UPDATED -->
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         </div>
-        <div><div class="info-label">Email</div><div class="info-value"><a href="mailto:tusharg.aiims@gmail.com">tusharg.aiims@gmail.com</a></div></div>
+        <div><div class="info-label">Email</div><div class="info-value"><a href="/cdn-cgi/l/email-protection#255150564d4457420b444c4c4856654248444c490b464a48"><span class="__cf_email__" data-cfemail="027677716a6370652c636b6b6f7142656f636b6e2c616d6f">[email&#160;protected]</span></a></div></div>
       </div>
       <div class="social-row">
         <a href="https://www.instagram.com/ortho.sphere" target="_blank" class="social-icon"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
@@ -612,6 +628,9 @@ footer a:hover{color:var(--teal-light)}
           <div class="form-group"><label>Patient Name</label><input type="text" id="fname" placeholder="First and last name"></div>
           <div class="form-group"><label>Phone Number</label><input type="tel" id="fphone" placeholder="+91 98765 43210"></div>
         </div>
+        <!-- Hidden fields for clinic selection -->
+        <input type="hidden" id="fclinic" value="">
+        <input type="hidden" id="fclnictiming" value="">
         <div class="form-row">
           <div class="form-group"><label>Patient Age</label><input type="text" id="fage" placeholder="e.g. 45"></div>
           <div class="form-group">
@@ -654,7 +673,7 @@ footer a:hover{color:var(--teal-light)}
   <p>&copy; 2026 OrthoSphere – Dr. Tushar Gupta. All rights reserved. &nbsp;|&nbsp; <a href="#">Privacy Policy</a> &nbsp;|&nbsp; <a href="#">Terms</a></p>
 </footer>
 
-<script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 // Nav scroll
 window.addEventListener('scroll',()=>{
   document.getElementById('navbar').classList.toggle('scrolled',window.scrollY>30);
@@ -682,10 +701,27 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 // ─── WhatsApp Form Submit ───
+// Clinic selection function
+function selectClinic(clinicName, clinicTiming) {
+  // Remove selected class from all cards
+  document.querySelectorAll('.clinic-card-compact').forEach(card => {
+    card.classList.remove('selected');
+  });
+  
+  // Add selected class to clicked card
+  event.currentTarget.classList.add('selected');
+  
+  // Store values in hidden fields
+  document.getElementById('fclinic').value = clinicName;
+  document.getElementById('fclnictiming').value = clinicTiming;
+}
+
 function sendWhatsApp(){
   const name    = document.getElementById('fname').value.trim();
   const phone   = document.getElementById('fphone').value.trim();
   const age     = document.getElementById('fage').value.trim();
+  const clinic  = document.getElementById('fclinic').value;
+  const clinicTiming = document.getElementById('fclnictiming').value;
   const concern = document.getElementById('fconcern').value;
   const desc    = document.getElementById('fdesc').value.trim();
 
@@ -693,14 +729,17 @@ function sendWhatsApp(){
   msg += '*Patient Name:* ' + (name || 'Not provided') + '\n';
   msg += '*Phone:* ' + (phone || 'Not provided') + '\n';
   msg += '*Age:* ' + (age || 'Not provided') + '\n';
+  if(clinic) {
+    msg += '*Preferred Clinic:* ' + clinic + '\n';
+    msg += '*Clinic Timings:* ' + clinicTiming + '\n';
+  }
   msg += '*Area of Concern:* ' + concern + '\n';
-  if(desc){ msg += '*Description:* ' + desc + '\n'; }
-  msg += '\nPlease confirm available slot. Thank you!';
+  if(desc) msg += '*Description:* ' + desc + '\n';
 
-  const url = 'https://wa.me/919953030419?text=' + encodeURIComponent(msg);
+  const whatsappNum = '919953030419';
+  const url = 'https://wa.me/' + whatsappNum + '?text=' + encodeURIComponent(msg);
   window.open(url, '_blank');
 }
 </script>
-
 </body>
 </html>
