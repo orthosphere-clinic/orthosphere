@@ -196,39 +196,36 @@ nav.scrolled{padding:10px 48px}
 .social-icon svg{width:15px;height:15px;stroke:var(--warm-gray);fill:none;stroke-width:1.8;transition:stroke .3s}
 .social-icon:hover svg{stroke:#fff}
 
-/* ─── LOCATION LINKS – underline + pin + map popover ─── */
-.locations{position:relative}
-.loc-wrap{position:relative;display:inline-block}
+/* ─── LOCATION LINKS – clean style ─── */
 .locations a{
-  color:var(--teal-dark);
+  color:var(--charcoal);
   text-decoration:none;
-  border-bottom:1.5px solid var(--teal-light);
-  padding-bottom:1px;
-  display:inline-flex;align-items:center;gap:5px;
-  transition:color .2s,border-color .2s;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  transition:all .2s;
+  font-weight:500;
+  padding:6px 0;
+  border-left:2px solid transparent;
+  padding-left:0;
 }
-.locations a:hover{color:var(--teal);border-color:var(--teal)}
-.locations a .pin{width:11px;height:11px;flex-shrink:0;stroke:var(--teal-dark);fill:none;stroke-width:2;transition:stroke .2s}
-.locations a:hover .pin{stroke:var(--teal)}
-/* Map preview card */
-.map-pop{
-  position:absolute;left:0;bottom:calc(100% + 8px);
-  width:260px;height:180px;border-radius:10px;overflow:hidden;
-  box-shadow:0 8px 28px rgba(0,0,0,.14);
-  border:2px solid #fff;
-  opacity:0;pointer-events:none;
-  transform:translateY(6px);
-  transition:opacity .22s ease,transform .22s ease;
-  z-index:50;background:#d4ddd8;
+.locations a:hover{
+  color:var(--teal);
+  padding-left:8px;
+  border-left-color:var(--teal);
 }
-.map-pop iframe{width:100%;height:100%;border:none;display:block}
-.loc-wrap:hover .map-pop{opacity:1;pointer-events:auto;transform:translateY(0)}
-/* little arrow notch below popover */
-.map-pop::after{
-  content:'';position:absolute;bottom:-6px;left:24px;
-  width:12px;height:12px;background:#fff;
-  transform:rotate(45deg);box-shadow:1px 1px 3px rgba(0,0,0,.08);
-  z-index:-1;
+
+.locations a .pin{
+  width:13px;
+  height:13px;
+  flex-shrink:0;
+  stroke:var(--teal);
+  fill:none;
+  stroke-width:2;
+  transition:transform .2s;
+}
+.locations a:hover .pin{
+  transform:translateY(-1px);
 }
 
 /* ─── FORM ─── */
@@ -277,8 +274,6 @@ footer a:hover{color:var(--teal-light)}
   .spec-card{flex-direction:column;gap:10px}
   .exp-layout,.research-layout,.contact-layout{grid-template-columns:1fr;gap:32px;max-width:480px;margin-left:auto;margin-right:auto}
   .insta-grid{grid-template-columns:repeat(2,1fr);max-width:420px;margin-left:auto;margin-right:auto}
-  /* hide map popover on mobile – tap opens link directly */
-  .map-pop{display:none}
 }
 @media(max-width:560px){
   .hero-content h2{font-size:2.2rem}
@@ -500,16 +495,28 @@ footer a:hover{color:var(--teal-light)}
       <h3>Visit OrthoSphere Clinic</h3>
       <p>Ready to take the first step towards a pain-free life? Visit us or schedule an appointment online.</p>
 
-      <!-- Locations – underlined + pin icon + map popover on hover -->
+      <!-- Locations – clean link style -->
       <div class="info-item">
         <div class="info-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
         <div>
           <div class="info-label">Clinic Locations</div>
           <div class="info-value locations">
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/ywdVgM3BtfYnVhTB8" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>OrthoSphere Clinic, Punjabi Bagh</a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=OrthoSphere+Clinic+East+Punjabi+Bagh+New+Delhi&zoom=15" loading="lazy"></iframe></div></span><br>
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Kalra Hospital, Kirti Nagar</a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=Kalra+Hospital+Kirti+Nagar+New+Delhi&zoom=15" loading="lazy"></iframe></div></span><br>
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Apollo Spectra Hospital, Pusa Road</a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=Apollo+Spectra+Hospital+Pusa+Road+New+Delhi&zoom=15" loading="lazy"></iframe></div></span><br>
-            <span class="loc-wrap"><a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank"><svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span></a><div class="map-pop"><iframe src="https://www.google.com/maps/embed?q=Vinayak+Hospital+Model+Town+New+Delhi&zoom=15" loading="lazy"></iframe></div></span>
+            <a href="https://maps.app.goo.gl/ywdVgM3BtfYnVhTB8" target="_blank">
+              <svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              OrthoSphere Clinic, Punjabi Bagh
+            </a><br>
+            <a href="https://maps.app.goo.gl/RDGyaQQaGqtYmwvB9" target="_blank">
+              <svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Kalra Hospital, Kirti Nagar
+            </a><br>
+            <a href="https://maps.app.goo.gl/6UULYhbxGaUfQwc26" target="_blank">
+              <svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Apollo Spectra Hospital, Pusa Road
+            </a><br>
+            <a href="https://maps.app.goo.gl/sWu8QDFD1YTL7d2M9" target="_blank">
+              <svg class="pin" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Vinayak Hospital, Model Town <span style="font-size:0.62rem;color:var(--mid-gray);font-weight:400">(Charitable OPD)</span>
+            </a>
           </div>
         </div>
       </div>
